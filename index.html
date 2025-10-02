@@ -10,12 +10,15 @@
   <meta name="title" content="10th Skin & Hair Summit" />
   <meta name="description" content="10th Skin & Hair Summit – Celebrating a decade of science, innovation, and advocacy." />
 
-  <!-- Open Graph (used by WhatsApp/FB) -->
+  <!-- Open Graph (WhatsApp/FB) -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mohamedelhamahmy.github.io/skin-hair-summit-2025/" />
   <meta property="og:title" content="10th Skin & Hair Summit" />
   <meta property="og:description" content="10th Skin & Hair Summit – Celebrating a decade of science, innovation, and advocacy." />
-  <meta property="og:image" content="https://mohamedelhamahmy.github.io/skin-hair-summit-2025/banner.jpg" />
+  <!-- use the same banner for the social preview -->
+  <meta property="og:image" content="https://mohamedelhamahmy.github.io/skin-hair-summit-2025/banner.jpg?v=2" />
+  <meta property="og:image:secure_url" content="https://mohamedelhamahmy.github.io/skin-hair-summit-2025/banner.jpg?v=2" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="Skin & Hair Summit" />
@@ -24,49 +27,43 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="10th Skin & Hair Summit" />
   <meta name="twitter:description" content="10th Skin & Hair Summit – Celebrating a decade of science, innovation, and advocacy." />
-  <meta name="twitter:image" content="https://mohamedelhamahmy.github.io/skin-hair-summit-2025/banner.jpg" />
+  <meta name="twitter:image" content="https://mohamedelhamahmy.github.io/skin-hair-summit-2025/banner.jpg?v=2" />
 
   <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #f8f9fc;
-      color: #0f172a;
-      display: grid;
-      place-items: center;
-      min-height: 100vh;
-      padding: 20px;
+    :root{
+      --bg:#f8f9fc; --text:#0f172a; --muted:#475569;
+      --card:#fff; --primary:#1355e0; --primaryH:#0f47bf;
+      --radius:16px; --shadow:0 12px 30px rgba(2,6,23,.08)
     }
-    .card {
-      max-width: 600px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-      padding: 32px;
-      text-align: center;
+    *{box-sizing:border-box}
+    body{
+      margin:0; font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg); color:var(--text);
+      min-height:100vh; display:grid; place-items:center; padding:20px
     }
-    h1 { margin: 0 0 12px; font-size: 28px; }
-    .subtitle { font-weight: 600; margin: 0 0 12px; }
-    .desc { font-size: 16px; color: #475569; margin: 0 0 24px; }
-    .btn {
-      display: inline-block;
-      background: #1355e0;
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 20px;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: background .2s ease;
-    }
-    .btn:hover { background: #0f47bf; }
+    .card{max-width:720px;width:100%;background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .hero{width:100%;aspect-ratio:1200/630;object-fit:cover;display:block}
+    .content{padding:28px}
+    h1{margin:0 0 10px;font-size:28px;line-height:1.2}
+    .subtitle{margin:0 0 12px;font-weight:700}
+    .desc{margin:0 0 22px;color:var(--muted)}
+    .btn{display:inline-block;background:var(--primary);color:#fff;text-decoration:none;
+      padding:14px 20px;border-radius:10px;font-weight:600;transition:background .2s}
+    .btn:hover{background:var(--primaryH)}
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>10th Skin & Hair Summit</h1>
-    <p class="subtitle">LDB City, Hyde Out – New Cairo</p>
-    <p class="desc">Celebrating a decade of science, innovation, and advocacy.</p>
-    <a class="btn" href="https://maps.app.goo.gl/5oANknSb1bLJ4MNH6?g_st=iw" target="_blank">📍 Open in Google Maps</a>
-  </div>
+  <article class="card">
+    <!-- THIS displays the banner on the page -->
+    <img class="hero" src="./banner.jpg" alt="10th Skin & Hair Summit banner">
+
+    <section class="content">
+      <h1>10th Skin & Hair Summit</h1>
+      <p class="subtitle">LDB City, Hyde Out – New Cairo</p>
+      <p class="desc">Celebrating a decade of science, innovation, and advocacy.</p>
+
+      <a class="btn" href="https://maps.app.goo.gl/5oANknSb1bLJ4MNH6?g_st=iw" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+    </section>
+  </article>
 </body>
 </html>
